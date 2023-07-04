@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.kendostatic.com/2019.3.1023/styles/kendo.common.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.kendostatic.com/2019.3.1023/styles/kendo.default.min.css"
+    />
+    <script src="https://cdn.kendostatic.com/2019.3.1023/js/jquery.min.js"></script>
+    <script src="https://cdn.kendostatic.com/2019.3.1023/js/kendo.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.2.616/js/kendo.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.27/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.27/"></script>
+    <script src="App.js" defer></script>
+    <style>
+      #baseMap {
+        width: 1000px;
+        height: 500px;
+      }
+      #gridElement {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="baseMap"></div>
+    <div>
+      <label for="objectidInput">Enter Object ID:</label>
+      <input type="text" id="objectidInput" value="" name="objectidInput" />
+      <button id="searchButton">Search</button>
+    </div>
+    <div id="gridElement"></div>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MapSettingsTask.APIs.props" />
+</Project>
