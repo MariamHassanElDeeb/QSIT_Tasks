@@ -35,3 +35,8 @@ The application will query the feature layer with the specified criteria and dis
 
 Each row in the grid will have a "zoom" button. Clicking on this button will zoom the map to the selected building.
 
+## Demo Video
+
+Click the link below to watch a demo video showcasing the features and functionality of the application:
+
+[Watch Demo Video](https://player.vimeo.com/video/842470546?h=b340bcc31e)
