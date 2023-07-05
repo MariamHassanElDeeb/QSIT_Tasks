@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MapConfig.APIs.Data;
 using MapSettingsTask.APIs.Data.Ccontext;
+using MapSettingsTask.APIs.Data;
 
 namespace MapSettingsTask.APIs.Controllers;
 

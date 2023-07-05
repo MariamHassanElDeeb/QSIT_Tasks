@@ -1,7 +1,7 @@
-﻿using MapSettingsTask.APIs.Data.Model;
+﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace MapConfig.APIs.Data;
+namespace MapSettingsTask.APIs.Data;
 
     public class MapType
     {

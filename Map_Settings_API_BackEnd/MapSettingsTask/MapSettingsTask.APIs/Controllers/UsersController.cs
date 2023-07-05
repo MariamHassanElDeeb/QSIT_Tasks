@@ -33,14 +33,14 @@ public class UsersController : ControllerBase
         MapCreator? user = await _userManager.FindByNameAsync(credentials.UserName);
         if (user is null)
         {
-            return BadRequest();
+            return NotFound();
         }
 
 
         bool isAuthenticated = await _userManager.CheckPasswordAsync(user, credentials.Password);
         if (!isAuthenticated)
         {
-            return BadRequest();
+            return Unauthorized();
         }
 
         var claimsList = await _userManager.GetClaimsAsync(user);

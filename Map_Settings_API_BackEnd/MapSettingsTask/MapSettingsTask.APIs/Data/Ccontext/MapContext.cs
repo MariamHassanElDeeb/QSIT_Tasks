@@ -1,5 +1,4 @@
-﻿using MapConfig.APIs.Data;
-using MapSettingsTask.APIs.Data.Model;
+﻿using MapSettingsTask.APIs.Data.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

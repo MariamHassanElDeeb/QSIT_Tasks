@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MapConfig.APIs.Data;
+namespace MapSettingsTask.APIs.Data;
 
-    public class MapSubType
+
+public class MapSubType
     {
     [Key]
     public int Id { get; set; }

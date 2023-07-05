@@ -15,7 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 #endregion
 
+
 #region CORS
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -26,6 +28,7 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
 #endregion
 
 #region Database
@@ -33,7 +36,10 @@ var connectionString = builder.Configuration.GetConnectionString("GisConn");
 builder.Services.AddDbContext<MapContext>(options => options.UseSqlServer(connectionString));
 #endregion
 
+
 #region Identity
+
+
 builder.Services.AddIdentity<MapCreator, IdentityRole>(options =>
 {
     options.Password.RequireNonAlphanumeric = false;
@@ -47,9 +53,16 @@ builder.Services.AddIdentity<MapCreator, IdentityRole>(options =>
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
 })
     .AddEntityFrameworkStores<MapContext>();
+
+
+
+
+
 #endregion
 
+
 #region Authentication
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = "MapAuthentication";
@@ -68,7 +81,18 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = false,
         };
     });
+
 #endregion
+
+#region Authorization
+builder.Services.AddAuthorization();
+#endregion
+
+#region Manager
+builder.Services.AddScoped<HttpContextAccessor>();
+#endregion
+
+
 
 var app = builder.Build();
 
@@ -83,7 +107,7 @@ app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 
-//app.UseAuthorization();
+app.UseAuthorization();
 
 app.MapControllers();
 

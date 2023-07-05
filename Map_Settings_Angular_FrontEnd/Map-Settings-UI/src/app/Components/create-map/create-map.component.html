@@ -1,0 +1,170 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 py-5 py-xl-5 py-xxl-7">
+      <h1 class="display-3 text-1000 fw-normal">Let’s create a map</h1>
+
+      <div class="pt-5">
+        <nav>
+
+          <!-- Map Binding -->
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="row g-4 mt-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div id="map" class="hagar"></div>
+
+              <!-- Formmmmmmmmmmmmmmmm -->
+              <form class="row g-4 mt-2" [formGroup]="createmapform" (ngSubmit)="submitForm()">
+
+
+                <label style="text-align: left;color: black;font-weight: bold;"><span
+                    style="text-decoration: underline;">Map</span> Settings</label>
+                <!-- clusterRedius -->
+                <div class="input-group-icon col-sm-12 col-md-12 col-xl-6">
+                  <input #clusterRedius class="form-control input-box form-voyage-control" type="number"
+                    placeholder="Enter clusterRedius" formControlName="clusterRedius"><span
+                    class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-pen"></i></span>
+                  <div class="alert alert-danger"
+                    *ngIf="(createmapform.controls['clusterRedius'].errors && createmapform.controls['clusterRedius'].errors['required'] && (createmapform.controls['clusterRedius'].dirty || createmapform.controls['clusterRedius'].touched))">
+                    clusterRedius field is required
+                  </div>
+                  <div *ngIf="clusterRedius.value && !clusterRediusValid && !createmapform.get('clusterRedius')?.errors?.['pattern']" class="alert alert-danger">
+
+                    Zero is Not allowed.the value must be between 0.01and 99
+
+
+                  </div>
+                  <div *ngIf=" createmapform.get('clusterRedius')?.errors?.['pattern']" class="alert alert-danger">
+                    Please enter a maximum of 3 decimal places.
+                  </div>
+                </div>
+
+                
+
+
+                <div class="form-check form-switch col-sm-12 col-md-12 col-xl-6 rounded" style="background-color: white;">
+                  <div class="row">
+                    <div class="col-11" style="text-align: left;">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">Geo - fencing</label>
+                    </div>
+                    <div class="col-1" style="text-align: right;">
+                      <input #isGeofenced class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" value="false" formControlName="isGeofenced">
+                    </div>
+                  </div>
+                </div>
+                
+
+                <label style="text-align: left;color: black;font-weight: bold;"><span
+                    style="text-decoration: underline;">Dupli</span>cation Event Configuration</label>
+                <!-- timeBuffer -->
+                <div class="input-group-icon col-sm-12 col-md-12 col-xl-6">
+                  <input #timeBuffer class="form-control input-box form-voyage-control" type="number"
+                    placeholder="Enter timeBuffer" formControlName="timeBuffer"><span
+                    class="nav-link-icon text-800 fs--1 input-box-icon"><i class="far fa-clock"></i></span>
+                  <div class="alert alert-danger"
+                    *ngIf="(createmapform.controls['timeBuffer'].errors && createmapform.controls['timeBuffer'].errors['required'] && (createmapform.controls['timeBuffer'].dirty || createmapform.controls['timeBuffer'].touched))">
+                    timeBuffer field is required
+                  </div>
+                   <div *ngIf="timeBuffer.value && !timeBufferValid" class="alert alert-danger">
+
+                    Zero is Not allowed.the value must be between 0.01and 99
+
+                  </div>
+                  <div *ngIf="createmapform.get('timeBuffer')?.errors?.['pattern']" class="alert alert-danger">
+
+                    please enter a maximum of 3 decimal places.
+                  </div>
+
+
+                </div>
+
+
+
+
+                <!-- locationBuffer -->
+                <div class="input-group-icon col-sm-12 col-md-12 col-xl-6">
+                  <input #locationBuffer class="form-control input-box form-voyage-control" type="number"
+                    placeholder="Enter locationBuffer" formControlName="locationBuffer"><span
+                    class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fa">&#xf041;</i></span>
+                  <div class="alert alert-danger"
+                    *ngIf="(createmapform.controls['locationBuffer'].errors && createmapform.controls['locationBuffer'].errors['required'] && (createmapform.controls['locationBuffer'].dirty || createmapform.controls['locationBuffer'].touched))">
+                    locationBuffer field is required
+                  </div>
+                  <div *ngIf="locationBuffer.value && !locationBufferValid" class="alert alert-danger">
+
+                    Zero is Not allowed.the value must be between 0.01and 99
+
+
+                  </div>
+                  <div *ngIf="createmapform.get('locationBuffer')?.errors?.['pattern']" class="alert alert-danger">
+                    Please enter a maximum of 3 decimal places.
+
+                  </div>
+                </div>
+
+
+                <label style="text-align: left;color: black;font-weight: bold;"><span
+                    style="text-decoration: underline;">End E</span>vent Duration</label>
+                <!-- duration-->
+                <div class="input-group-icon col-sm-12 col-md-12 col-xl-6">
+                  <input #duration class="form-control input-box form-voyage-control" type="number"
+                    placeholder="Enter duration" formControlName="duration"><span
+                    class="nav-link-icon text-800 fs--1 input-box-icon"><i class='far fa-clock'></i></span>
+                  <div class="alert alert-danger"
+                    *ngIf="(createmapform.controls['duration'].errors && createmapform.controls['duration'].errors['required'] && (createmapform.controls['duration'].dirty || createmapform.controls['duration'].touched))">
+                    duration field is required
+                  </div>
+                  <div *ngIf="duration.value && !durationValid" class="alert alert-danger">
+
+                    Zero is Not allowed.the value must be between 0.01and 99
+
+                  </div>
+                  <div *ngIf="createmapform.get('duration')?.errors?.['pattern']" class="alert alert-danger">
+                    Please enter a maximum of 3 decimal places.
+
+                  </div>
+                </div>
+                <br>
+                <br>
+
+                <!-- Type & SupType -->
+
+                <select  class="input-group-icon col-sm-12 col-md-12 col-xl-7" (change)="onTypeChange($event)">
+                  <option value="" disabled selected>Map Type</option>
+                  <option *ngFor="let type of Types" [value]="type.id">{{ type.type }}</option>
+                </select>
+
+
+
+
+                <select class="input-group-icon col-sm-12 col-md-12 col-xl-7" formControlName="mapSubtypeID">
+                  <option value="" disabled selected>Map Sub Type</option>
+                  <option *ngFor="let subtype of subtypes" [value]="subtype.id">{{subtype.subType}}</option>
+                </select>
+
+                <div>
+                  <input type="reset" value="Reset">
+                </div>
+                <script>
+                  $("#checkbox1").on('change', function () {
+                    if ($(this).is(':checked')) {
+                      $(this).attr('value', 'true');
+                    } else {
+                      $(this).attr('value', 'false');
+                    }
+                  });
+                </script>
+                <div class="col-12 col-xl-10 col-lg-12 d-grid mt-6">
+                  <input class="btn btn-secondary" [disabled]="createmapform.invalid" type="submit" value="Create">
+                </div>
+              </form>
+            </div>
+
+
+
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+</div>

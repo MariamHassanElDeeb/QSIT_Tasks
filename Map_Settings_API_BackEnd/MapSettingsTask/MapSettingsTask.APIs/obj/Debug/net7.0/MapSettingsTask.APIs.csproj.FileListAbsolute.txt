@@ -84,10 +84,6 @@ D:\Mariam ITI\QSIT_Tasks\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTas
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\appsettings.Development.json
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\appsettings.json
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.exe
-D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.deps.json
-D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.runtimeconfig.json
-D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.dll
-D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.pdb
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\Azure.Core.dll
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\Azure.Identity.dll
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\Humanizer.dll
@@ -162,5 +158,9 @@ D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSetting
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\obj\Debug\net7.0\MapSettingsTask.APIs.dll
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\obj\Debug\net7.0\refint\MapSettingsTask.APIs.dll
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\obj\Debug\net7.0\MapSettingsTask.APIs.pdb
+D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.deps.json
+D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.runtimeconfig.json
+D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.dll
+D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\bin\Debug\net7.0\MapSettingsTask.APIs.pdb
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\obj\Debug\net7.0\MapSettingsTask.APIs.genruntimeconfig.cache
 D:\ITI_Cources\iti 43\MEAN\Angular\Day5\Demo\Map_Settings_API_BackEnd\MapSettingsTask\MapSettingsTask.APIs\obj\Debug\net7.0\ref\MapSettingsTask.APIs.dll

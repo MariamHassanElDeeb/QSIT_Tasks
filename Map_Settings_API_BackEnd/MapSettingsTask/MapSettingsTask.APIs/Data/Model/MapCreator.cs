@@ -1,5 +1,4 @@
-﻿using MapConfig.APIs.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace MapSettingsTask.APIs.Data.Model
 {

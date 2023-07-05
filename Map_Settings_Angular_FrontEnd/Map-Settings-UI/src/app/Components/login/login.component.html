@@ -1,0 +1,46 @@
+<div class="container-fluid bg-primary py-5 mb-5 hero-header">
+  <div class="container py-5">
+      <div class="row justify-content-center py-5">
+          <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+              <h1 class="display-3 text-white animated slideInDown">Log in</h1>
+
+              <form [formGroup]="formlogin" (ngSubmit)="login()" class="form flex-column mt-5 col-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+
+                <div class="alert alert-danger" role="alert"
+                [ngClass]="{'visually-hidden': loginStatus != 'Failed'}">
+                  <strong>Error</strong> Username or password are not correct
+                </div>
+
+                <div class="mb-3">
+                  <input #username formControlName="username" type="text"
+                  class="form-control form-control-sm" aria-describedby="HelpUsername" placeholder="Username">
+                  <small *ngIf="username.value && !usernameValid" id="HelpUsername" class="text-danger">Username is not valid</small>
+                </div>
+
+                <div class="mb-3 input-group flex-nowrap">
+                  <input #password formControlName="password" type="password" id="password-input"
+                  class="form-control form-control-sm" aria-describedby="HelpPassword" placeholder="Password">
+                  <span class="input-group-text">
+                    <i class="fa fa-eye" id="togglePassword"
+                    style="cursor: pointer"></i>
+                    </span>
+                  <small *ngIf="password.value && !passwordValid" id="HelpPassword" class="text-danger">Password is not valid</small>
+                </div>
+
+                <input type="submit" value="submit" class="btn btn-success"
+                  [ngClass]="{'disabled': !formlogin.valid, 'visually-hidden': loginStatus == 'Posted'}">
+
+                <div class="text-white mt-3">Not a member? <a class="fw-bold text-light" routerLink="/userregister">Register</a></div>
+
+                <div class="spinner-border" role="status" [ngClass]="{'visually-hidden': loginStatus != 'Posted'}">
+                  <span class="visually-hidden">
+                    Loading...
+                  </span>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>

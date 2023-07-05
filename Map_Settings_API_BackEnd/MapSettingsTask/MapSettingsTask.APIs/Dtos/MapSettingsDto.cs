@@ -8,5 +8,5 @@ public class MapSettingsDto
         public decimal LocationBuffer { get; set; }
         public int Duration { get; set; }
         public int MapSubtypeID { get; set; }
-    }
+}
 

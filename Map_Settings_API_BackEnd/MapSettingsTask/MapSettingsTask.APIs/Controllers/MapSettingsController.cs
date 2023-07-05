@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MapSettingsTask.APIs.Data;
 using MapSettingsTask.APIs.Dtos;
 using MapSettingsTask.APIs.Data.Ccontext;
-using MapConfig.APIs.Data;
+using Microsoft.AspNetCore.Identity;
+using MapSettingsTask.APIs.Data.Model;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MapSettingsTask.APIs.Controllers;
 
@@ -17,14 +15,24 @@ namespace MapSettingsTask.APIs.Controllers;
     public class MapSettingsController : ControllerBase
     {
         private readonly MapContext _context;
-
-        public MapSettingsController(MapContext context)
+    private readonly UserManager<MapCreator> _userManager;
+    private readonly HttpContextAccessor _HttpContextAccessor;
+    public MapSettingsController(MapContext context, UserManager<MapCreator> userManager, HttpContextAccessor _httpContextAccessor)
         {
             _context = context;
-        }
+        _userManager = userManager;
+        _HttpContextAccessor = _httpContextAccessor;
 
-        // GET: api/MapSettings
-        [HttpGet]
+    }
+
+    private string GetCurrentUserId()
+    {
+        var userId = _HttpContextAccessor?.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        return userId ?? "82712fd4-3d4c-4569-bbb7-a29e65de36ec";
+    }
+
+    // GET: api/MapSettings
+    [HttpGet]
         public async Task<ActionResult<IEnumerable<MapSettings>>> GetSettings()
         {
           if (_context.Settings == null)
@@ -86,12 +94,14 @@ namespace MapSettingsTask.APIs.Controllers;
         // POST: api/MapSettings
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<MapSettingsDto>> PostMapSettings(MapSettingsDto mapSettingsDto)
+        [Authorize]
+        public async Task<ActionResult<MapSettings>> PostMapSettings(MapSettingsDto mapSettingsDto)
         {
           if (_context.Settings == null)
           {
               return Problem("Entity set 'MapContext.Settings'  is null.");
           }
+            string cid = GetCurrentUserId();
             var settings = new MapSettings()
             {
                 ClusterRedius= mapSettingsDto.ClusterRedius,
@@ -101,6 +111,8 @@ namespace MapSettingsTask.APIs.Controllers;
                TimeBuffer=mapSettingsDto.TimeBuffer,
                MapSubTypeId=mapSettingsDto.MapSubtypeID
             };
+        settings.MapCreatorId = GetCurrentUserId();
+        Console.WriteLine($"current id :{ GetCurrentUserId()}");
             _context.Settings.Add(settings);
             await _context.SaveChangesAsync();
 

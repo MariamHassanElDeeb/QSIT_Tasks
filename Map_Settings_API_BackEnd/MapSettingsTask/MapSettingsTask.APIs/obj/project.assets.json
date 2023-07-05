@@ -4814,11 +4814,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mariam ITI\\QSIT_Tasks\\Map_Settings_API_BackEnd\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
+      "projectUniqueName": "C:\\Users\\mariamhassan\\Downloads\\Mariam-task\\Mariam-task\\Task-API\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
       "projectName": "MapSettingsTask.APIs",
-      "projectPath": "D:\\Mariam ITI\\QSIT_Tasks\\Map_Settings_API_BackEnd\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
+      "projectPath": "C:\\Users\\mariamhassan\\Downloads\\Mariam-task\\Mariam-task\\Task-API\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
       "packagesPath": "C:\\Users\\mariamhassan\\.nuget\\packages\\",
-      "outputPath": "D:\\Mariam ITI\\QSIT_Tasks\\Map_Settings_API_BackEnd\\MapSettingsTask\\MapSettingsTask.APIs\\obj\\",
+      "outputPath": "C:\\Users\\mariamhassan\\Downloads\\Mariam-task\\Mariam-task\\Task-API\\MapSettingsTask\\MapSettingsTask.APIs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mariamhassan\\AppData\\Roaming\\NuGet\\NuGet.Config",

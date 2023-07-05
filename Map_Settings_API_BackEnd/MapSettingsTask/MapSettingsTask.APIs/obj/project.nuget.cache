@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zrn0NaQrmX/SFOLEN+WxYN/ebleFQcCa2rvzoOVgbqihbqV+2U0oUUGi05EcB03BWL93WBSAIq/hvrOwuIItBw==",
+  "dgSpecHash": "Ghm8UGPxLJSCzg8So0J3vbguUsN1evhVuW4PEzBqafFDzd7fg6xd3+ttLxbuWrAuy8Ge5QKjDIzQF86xi0Hofg==",
   "success": true,
-  "projectFilePath": "D:\\Mariam ITI\\QSIT_Tasks\\Map_Settings_API_BackEnd\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
+  "projectFilePath": "C:\\Users\\mariamhassan\\Downloads\\Mariam-task\\Mariam-task\\Task-API\\MapSettingsTask\\MapSettingsTask.APIs\\MapSettingsTask.APIs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mariamhassan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mariamhassan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
